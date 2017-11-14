@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Zombicide Suport</string>
+    <string name="Sala">Sala</string>
+
+    <string name="title_activity_fullcreen">FullcreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="Nombre">Nombre</string>
+    <string name="NPersonajes">Nº Personajes</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+</resources>
