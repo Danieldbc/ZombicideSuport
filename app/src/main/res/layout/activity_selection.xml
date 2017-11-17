@@ -7,6 +7,15 @@
     android:background="@drawable/zombicidefondo"
     tools:context="edu.eseiaat.upc.pma.manuel.daniel.zombicidesuport.SelectionActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ListaPersonajes"
+        android:layout_width="290dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -28,110 +37,12 @@
         android:id="@+id/imageView"
         android:layout_width="300dp"
         android:layout_height="230dp"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/relativeLayout2"
         android:saveEnabled="false"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/ejemplo" />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="280dp"
-        android:layout_height="75dp"
+        app:srcCompat="@drawable/ejemplo"
+        android:layout_alignBottom="@+id/imageButton7"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/imageView"
-        android:background="@drawable/ladrillos"
-        android:elevation="0dp">
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/tabla"
-            android:text="nombre"
-            android:textAlignment="center"
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/imageButton21"
-            android:background="@drawable/tabla"
-            android:text="nombre"
-            android:textAlignment="center"
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/imageButton22"
-            android:background="@drawable/tabla"
-            android:text="nombre"
-            android:textAlignment="center"
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/imageButton23"
-            android:background="@drawable/tabla"
-            android:text="nombre"
-            android:textAlignment="center"
-            android:textColor="@android:color/black" />
-
-        <ImageButton
-            android:id="@+id/imageButton19"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/calavera" />
-
-        <ImageButton
-            android:id="@+id/imageButton21"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="19dp"
-            android:layout_toEndOf="@+id/imageButton19"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/calavera" />
-
-        <ImageButton
-            android:id="@+id/imageButton22"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="22dp"
-            android:layout_toEndOf="@+id/imageButton21"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/calavera" />
-
-        <ImageButton
-            android:id="@+id/imageButton23"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/calavera" />
-
-    </RelativeLayout>
+        android:layout_marginBottom="12dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -212,9 +123,10 @@
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:background="@android:color/white"
-            android:layout_alignTop="@+id/textView6"
+            android:textColor="@android:color/black"
             android:layout_alignEnd="@+id/editText"
-            android:layout_alignBottom="@+id/textView6" />
+            android:layout_alignBottom="@+id/textView6"
+            android:layout_alignTop="@+id/textView6" />
 
         <EditText
             android:id="@+id/editText"
@@ -276,7 +188,6 @@
             android:textSize="18sp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
-
     </RelativeLayout>
 
     <TextView
