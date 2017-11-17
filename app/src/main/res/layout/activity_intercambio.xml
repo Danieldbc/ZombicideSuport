@@ -7,6 +7,23 @@
     android:background="@drawable/zombicidefondo"
     tools:context="edu.eseiaat.upc.pma.manuel.daniel.zombicidesuport.IntercambioActivity">
 
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button10"
+        android:layout_toStartOf="@+id/imageView15"
+        android:text="Cancelar" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="Aceptar"
+        android:layout_below="@+id/textView10"
+        android:layout_alignStart="@+id/button11" />
+
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="100dp"

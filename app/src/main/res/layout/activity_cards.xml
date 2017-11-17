@@ -8,6 +8,23 @@
     tools:context="edu.eseiaat.upc.pma.manuel.daniel.zombicidesuport.CardsActivity">
 
     <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button8"
+        android:layout_alignBottom="@+id/button8"
+        android:layout_alignEnd="@+id/imageView9"
+        android:text="Aceptar" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_below="@+id/imageView4"
+        android:text="Cancelar" />
+
+    <Button
         android:id="@+id/button3"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
