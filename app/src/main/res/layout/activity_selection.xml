@@ -14,34 +14,36 @@
         android:orientation="horizontal"
         android:scrollbars="horizontal"
         android:layout_alignTop="@+id/relativeLayout"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/relativeLayout" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Atras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="atras"
-        android:layout_below="@+id/DescripcionPersonaje"
-        android:layout_alignStart="@+id/DescripcionPersonaje" />
+        android:layout_below="@+id/HabRoja3"
+        android:layout_toEndOf="@+id/DescripcionPersonaje"
+        android:layout_marginTop="14dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Empezar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Empezar"
-        android:layout_marginEnd="13dp"
-        android:layout_below="@+id/DescripcionPersonaje"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/HabRoja3"
+        android:layout_toEndOf="@+id/Atras"
+        android:layout_marginTop="14dp" />
 
     <ImageView
         android:id="@+id/DescripcionPersonaje"
-        android:layout_width="300dp"
+        android:layout_width="150dp"
         android:layout_height="210dp"
         android:saveEnabled="false"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/ejemplo"
+        app:srcCompat="@drawable/pwatts"
         android:layout_below="@+id/ListaPersonajes"
-        android:layout_alignParentEnd="true" />
+        android:layout_toEndOf="@+id/relativeLayout" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -220,8 +222,99 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_alignTop="@+id/textView"
         android:layout_alignStart="@+id/imageButton6" />
+
+    <TextView
+        android:id="@+id/HabAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:text="+1 acción de combate a distancia"
+        android:textAlignment="center"
+        android:textSize="11dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/ListaPersonajes"
+        android:layout_toEndOf="@+id/DescripcionPersonaje" />
+
+    <TextView
+        android:id="@+id/HabAmarilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFEE58"
+        android:text="+1 acción de combate a distancia"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="11dp"
+        android:layout_below="@+id/HabAzul"
+        android:layout_toEndOf="@+id/DescripcionPersonaje"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/HabNaranja2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
+        android:text="+1 acción de combate a distancia"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="11dp"
+        android:layout_below="@+id/HabNaranja1"
+        android:layout_toEndOf="@+id/DescripcionPersonaje"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/HabRoja1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:text="+1 acción de combate a distancia"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="11dp"
+        android:layout_below="@+id/HabNaranja2"
+        android:layout_toEndOf="@+id/DescripcionPersonaje"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/HabRoja2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:text="+1 acción de combate a distancia"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="11dp"
+        android:layout_below="@+id/HabRoja1"
+        android:layout_toEndOf="@+id/DescripcionPersonaje"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/HabRoja3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:text="+1 acción de combate a distancia"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="11dp"
+        android:layout_below="@+id/HabRoja2"
+        android:layout_toEndOf="@+id/DescripcionPersonaje"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/HabNaranja1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
+        android:text="+1 acción de combate a distancia"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="11dp"
+        android:layout_below="@+id/HabAmarilla"
+        android:layout_toEndOf="@+id/DescripcionPersonaje"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/textView7"
@@ -257,5 +350,13 @@
         android:layout_alignBaseline="@+id/textView7"
         android:layout_alignBottom="@+id/textView7"
         android:layout_alignStart="@+id/imageButton7" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modo Zombie"
+        android:layout_alignBottom="@+id/imageButton7"
+        android:layout_alignStart="@+id/DescripcionPersonaje" />
 
 </RelativeLayout>
