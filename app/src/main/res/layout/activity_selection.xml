@@ -7,6 +7,67 @@
     android:background="@drawable/zombicidefondo"
     tools:context="edu.eseiaat.upc.pma.manuel.daniel.zombicidesuport.SelectionActivity">
 
+
+    <RelativeLayout
+        android:id="@+id/Personaje1"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/Personajes"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Personaje2"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/Personajes"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Personaje3"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/Personajes"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="15dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Personaje4"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/Personajes"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="90dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Personaje5"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/Personajes"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="90dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Personaje5"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/Personajes"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="90dp">
+
+    </RelativeLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/ListaPersonajes"
         android:layout_width="290dp"
@@ -57,18 +118,18 @@
         android:layout_marginStart="12dp">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/NombreSala"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView4"
-            android:layout_alignBottom="@+id/textView4"
-            android:layout_alignStart="@+id/editText"
+            android:layout_alignBaseline="@+id/Sala"
+            android:layout_alignBottom="@+id/Sala"
+            android:layout_alignStart="@+id/NombrePersona"
             android:text="Sala 3"
             android:textColor="@android:color/darker_gray"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/NombrePersona"
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:background="@android:color/white"
@@ -77,11 +138,11 @@
             android:text="Pedro"
             android:textColor="@android:color/black"
             android:layout_marginEnd="19dp"
-            android:layout_alignBottom="@+id/textView5"
+            android:layout_alignBottom="@+id/Nombre"
             android:layout_alignParentEnd="true" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/Nombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Nombre"
@@ -89,11 +150,11 @@
             android:textSize="18sp"
             android:layout_marginBottom="19dp"
             android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/editText"
+            android:layout_toStartOf="@+id/NombrePersona"
             android:layout_marginEnd="20dp" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/Sala"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Sala"
@@ -101,7 +162,8 @@
             android:textSize="18sp"
             android:layout_marginTop="19dp"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/textView5" />
+            android:layout_alignStart="@+id/Nombre" />
+
     </RelativeLayout>
 
     <TextView
@@ -195,15 +257,16 @@
         android:layout_marginTop="5dp" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/Personajes"
         android:layout_width="100dp"
         android:layout_height="20dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="49dp"
         android:background="@drawable/tabla"
         android:text="Personajes"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:layout_above="@+id/HabNaranja1"/>
+        android:layout_above="@+id/HabNaranja1"
+        android:layout_alignStart="@+id/Personaje1" />
 
     <CheckBox
         android:id="@+id/ModoZombie"

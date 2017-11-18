@@ -1,14 +1,22 @@
 package edu.eseiaat.upc.pma.manuel.daniel.zombicidesuport;
 
+import android.app.LauncherActivity;
+import android.content.ClipData;
 import android.content.Context;
+import android.os.Build;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.R.attr.shape;
 
 public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.ViewHolder> implements View.OnClickListener{
 
@@ -29,8 +37,8 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.personajes, parent, false);
-        ViewHolder vh = new ViewHolder(v);
+        final View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.personajes, parent, false);
+        final ViewHolder vh = new ViewHolder(v);
         v.setOnClickListener(this);
         return vh;
     }
@@ -40,8 +48,8 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
         final personajes item = (personajes) ListaPersonajes.get(position);
         holder.foto.setImageDrawable(item.getFoto());
         holder.nombre.setText(item.getNombre());
-
     }
+
 
 
     @Override
@@ -58,6 +66,7 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
             listener.onClick(view);
         }
     }
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
