@@ -12,7 +12,7 @@
         android:id="@+id/Personaje1"
         android:layout_width="60dp"
         android:layout_height="70dp"
-        android:layout_below="@id/Personajes"
+        android:layout_below="@+id/Personajes"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="15dp">
 
@@ -22,7 +22,7 @@
         android:id="@+id/Personaje2"
         android:layout_width="60dp"
         android:layout_height="70dp"
-        android:layout_below="@id/Personajes"
+        android:layout_below="@+id/Personajes"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="15dp">
 
@@ -32,7 +32,7 @@
         android:id="@+id/Personaje3"
         android:layout_width="60dp"
         android:layout_height="70dp"
-        android:layout_below="@id/Personajes"
+        android:layout_below="@+id/Personajes"
         android:layout_marginLeft="170dp"
         android:layout_marginTop="15dp">
 
@@ -42,7 +42,7 @@
         android:id="@+id/Personaje4"
         android:layout_width="60dp"
         android:layout_height="70dp"
-        android:layout_below="@id/Personajes"
+        android:layout_below="@+id/Personajes"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="90dp">
 
@@ -52,17 +52,17 @@
         android:id="@+id/Personaje5"
         android:layout_width="60dp"
         android:layout_height="70dp"
-        android:layout_below="@id/Personajes"
+        android:layout_below="@+id/Personajes"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="90dp">
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/Personaje5"
+        android:id="@+id/Personaje6"
         android:layout_width="60dp"
         android:layout_height="70dp"
-        android:layout_below="@id/Personajes"
+        android:layout_below="@+id/Personajes"
         android:layout_marginLeft="170dp"
         android:layout_marginTop="90dp">
 
