@@ -1,20 +1,20 @@
 package edu.eseiaat.upc.pma.manuel.daniel.zombicidesuport;
 
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageView;
 
 public class SelectionActivity extends AppCompatActivity {
 
 
-    private RecyclerView ViewPersonajes;
-    private RecyclerView.Adapter Adapter;
-    private ArrayList<personajes> ListaPersonajes;
+    private RecyclerView viewPersonajes;
+    private PersonajesAdapter adapter;
+    private LinearLayoutManager linlayoutmanager;
+    private ImageView descripcionPersonaje;
 
 
     @Override
@@ -22,21 +22,49 @@ public class SelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
-        ViewPersonajes =(RecyclerView)findViewById(R.id.ListaPersonajes);
-        ViewPersonajes.isHorizontalScrollBarEnabled();
-        ViewPersonajes.setHasFixedSize(true);
-        ViewPersonajes.setLayoutManager(new LinearLayoutManager(this));
-        Adapter = new PersonajesAdapter(getData());
-        ViewPersonajes.setAdapter(Adapter);
+        descripcionPersonaje =(ImageView)findViewById(R.id.DescripcionPersonaje);
+
+        viewPersonajes =(RecyclerView)findViewById(R.id.ListaPersonajes);
+        linlayoutmanager =new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true);
+        viewPersonajes.setLayoutManager(linlayoutmanager);
+        adapter=new PersonajesAdapter(this);
+        viewPersonajes.setAdapter(adapter);
+
+        CrearPersonajes();
+
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PersonajeSeleccionado(view);
+
+            }
+        });
+
+
 
     }
 
-    private ArrayList<personajes> getData() {
-       String nombre="hola";
-        Drawable picture=getDrawable(R.drawable.calavera);
-        ListaPersonajes.add(new personajes(nombre,picture));
+    private void PersonajeSeleccionado(View view) {
+        int d=viewPersonajes.getChildAdapterPosition(view);
 
-        return ListaPersonajes;
+        if (d==3){
+            descripcionPersonaje.setImageDrawable(getDrawable(R.drawable.calavera));
+        }
     }
+
+    private void CrearPersonajes() {
+
+        adapter.add(new personajes("hola",getDrawable(R.drawable.calavera)));
+        adapter.add(new personajes("hola2",getDrawable(R.drawable.tabla)));
+        adapter.add(new personajes("hola3",getDrawable(R.drawable.ejemplo)));
+        adapter.add(new personajes("hola4",getDrawable(R.drawable.rifle)));
+        adapter.add(new personajes("hola5",getDrawable(R.drawable.madera)));
+        adapter.add(new personajes("hola6",getDrawable(R.drawable.ladrillos)));
+        adapter.add(new personajes("hola7",getDrawable(R.drawable.mancharoja)));
+        adapter.add(new personajes("hola8",getDrawable(R.drawable.calavera)));
+    }
+
+
+
 }
 
