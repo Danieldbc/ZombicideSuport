@@ -73,3 +73,5 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
 }
 
 
+
+
