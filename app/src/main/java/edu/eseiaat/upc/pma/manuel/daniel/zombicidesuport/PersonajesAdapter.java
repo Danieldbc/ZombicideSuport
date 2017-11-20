@@ -24,15 +24,15 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
     private Context context;
     private View.OnClickListener listener;
 
-    public PersonajesAdapter(Context c) {
+    public PersonajesAdapter(Context c, List<personajes> list) {
         this.context = c;
-        ListaPersonajes = new ArrayList();
+        ListaPersonajes = list;
     }
 
-    public void add(personajes i) {
-        ListaPersonajes.add(i);
-        notifyItemInserted(ListaPersonajes.indexOf(i));
-    }
+//    public void add(personajes i) {
+//        ListaPersonajes.add(i);
+//        notifyItemInserted(ListaPersonajes.indexOf(i));
+//    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
@@ -45,7 +45,7 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final personajes item = (personajes) ListaPersonajes.get(position);
+        personajes item = (personajes) ListaPersonajes.get(position);
         holder.foto.setImageDrawable(item.getFoto());
         holder.nombre.setText(item.getNombre());
     }

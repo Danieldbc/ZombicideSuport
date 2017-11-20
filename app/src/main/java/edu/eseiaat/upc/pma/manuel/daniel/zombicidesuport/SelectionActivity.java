@@ -15,11 +15,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SelectionActivity extends AppCompatActivity {
 
 
     private RecyclerView viewPersonajes;
+    private List<personajes> listaPersonajes;
     private PersonajesAdapter adapterPersonajes;
     private LinearLayoutManager linlayoutmanager;
     private ImageView descripcionPersonaje;
@@ -46,10 +48,11 @@ public class SelectionActivity extends AppCompatActivity {
         viewPersonajes =(RecyclerView)findViewById(R.id.ListaPersonajes);
         linlayoutmanager =new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,true);
         viewPersonajes.setLayoutManager(linlayoutmanager);
-        adapterPersonajes =new PersonajesAdapter(this);
+        CrearPersonajes();
+        adapterPersonajes =new PersonajesAdapter(this,listaPersonajes);
         viewPersonajes.setAdapter(adapterPersonajes);
 
-        CrearPersonajes();
+
         Watts();
 
         modoZombie.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +75,8 @@ public class SelectionActivity extends AppCompatActivity {
     }
 
     private void PersonajeSeleccionado() {
+        personajes p = listaPersonajes.get(idPersonaje);
+        habAzul.setText(p.getHabAzul());
         if (idPersonaje==0){
             Watts();
         }
@@ -233,16 +238,16 @@ public class SelectionActivity extends AppCompatActivity {
 
     private void CrearPersonajes() {
 
-        adapterPersonajes.add(new personajes("Watts",getDrawable(R.drawable.pwattscara)));
-        adapterPersonajes.add(new personajes("Joshua",getDrawable(R.drawable.pjoshuacara)));
-        adapterPersonajes.add(new personajes("Belle",getDrawable(R.drawable.pbellecara)));
-        adapterPersonajes.add(new personajes("Grindlock",getDrawable(R.drawable.pgrindlockcara)));
-        adapterPersonajes.add(new personajes("Kim",getDrawable(R.drawable.pkimcara)));
-        adapterPersonajes.add(new personajes("Shannon",getDrawable(R.drawable.pshannoncara)));
+        listaPersonajes.add(new personajes("Watts",getDrawable(R.drawable.pwattscara)));
+        listaPersonajes.add(new personajes("Joshua",getDrawable(R.drawable.pjoshuacara)));
+        listaPersonajes.add(new personajes("Belle",getDrawable(R.drawable.pbellecara)));
+        listaPersonajes.add(new personajes("Grindlock",getDrawable(R.drawable.pgrindlockcara)));
+        listaPersonajes.add(new personajes("Kim",getDrawable(R.drawable.pkimcara)));
+        listaPersonajes.add(new personajes("Shannon",getDrawable(R.drawable.pshannoncara)));
         //sobran los siquientes(en el futuro habrá más personajes), son para ver si funciona el recyclerview
-        adapterPersonajes.add(new personajes("Grindlock",getDrawable(R.drawable.pgrindlockcara)));
-        adapterPersonajes.add(new personajes("Kim",getDrawable(R.drawable.pkimcara)));
-        adapterPersonajes.add(new personajes("Shannon",getDrawable(R.drawable.pshannoncara)));
+        listaPersonajes.add(new personajes("Grindlock",getDrawable(R.drawable.pgrindlockcara)));
+        listaPersonajes.add(new personajes("Kim",getDrawable(R.drawable.pkimcara)));
+        listaPersonajes.add(new personajes("Shannon",getDrawable(R.drawable.pshannoncara)));
 
     }
 }
