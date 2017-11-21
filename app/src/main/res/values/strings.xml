@@ -37,4 +37,12 @@
     <string name="mas1AlDañoCuerpoACuerpo">+1 al daño: Cuerpo a cuerpo</string>
     <string name="EsoEsTodoLoQueTienes">¿Eso es todo lo que tienes?</string>
     <string name="seisEnElDadoMas1DadoDeCombate">6 en el dado: +1 dado de combate</string>
+    <string name="FrenesiCuerpoACuerpo">Frenesí: Cuerpo a cuerpo</string>
+    <string name="FrenesiCombate">Frenesí: Combate</string>
+    <string name="SuperFuerza">Súper fuerza</string>
+    <string name="Regeneracion">Regeneración</string>
+    <string name="FrenesiAdistancia">Frenesí: A distancia</string>
+    <string name="SegadoraCombate">Segadora: Combate</string>
+    <string name="mas1dadoADistancia">+1 dado: A distancia</string>
+    <string name="VinculoZombi">Vínculo zombi</string>
 </resources>

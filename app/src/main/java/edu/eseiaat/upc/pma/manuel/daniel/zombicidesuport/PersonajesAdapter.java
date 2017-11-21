@@ -1,22 +1,14 @@
 package edu.eseiaat.upc.pma.manuel.daniel.zombicidesuport;
 
-import android.app.LauncherActivity;
-import android.content.ClipData;
 import android.content.Context;
-import android.os.Build;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import java.util.ArrayList;
-import java.util.List;
 
-import static android.R.attr.shape;
+import java.util.List;
 
 public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.ViewHolder> implements View.OnClickListener{
 
@@ -24,15 +16,11 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
     private Context context;
     private View.OnClickListener listener;
 
-    public PersonajesAdapter(Context c, List<personajes> list) {
+    public PersonajesAdapter(Context c, List<Personaje> list) {
         this.context = c;
         ListaPersonajes = list;
     }
 
-//    public void add(personajes i) {
-//        ListaPersonajes.add(i);
-//        notifyItemInserted(ListaPersonajes.indexOf(i));
-//    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
@@ -45,8 +33,8 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        personajes item = (personajes) ListaPersonajes.get(position);
-        holder.foto.setImageDrawable(item.getFoto());
+        Personaje item = (Personaje) ListaPersonajes.get(position);
+        holder.cara.setImageDrawable(item.getCara());
         holder.nombre.setText(item.getNombre());
     }
 
@@ -70,12 +58,12 @@ public class PersonajesAdapter extends RecyclerView.Adapter<PersonajesAdapter.Vi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        protected ImageView foto;
+        protected ImageView cara;
         protected TextView nombre;
 
         public ViewHolder(View v) {
             super(v);
-            foto = (ImageView) v.findViewById(R.id.foto);
+            cara = (ImageView) v.findViewById(R.id.foto);
             nombre = (TextView) v.findViewById(R.id.nombre);
         }
     }
